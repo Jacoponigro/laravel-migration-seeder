@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Database\Seeder;
-use app\Comic;
+use App\Comic;
 use Faker\Generator as Faker;
 
 class ComicsTableSeeder extends Seeder
@@ -24,7 +24,7 @@ class ComicsTableSeeder extends Seeder
             $newComic->num_pages = $faker->numberBetween(100, 700);
             $newComic->release = $faker->year();
             $newComic->price = $faker->randomFloat(2, 1, 9999);
-            $newComic->colored = $faker->rand(0,1);
+            $newComic->colored = rand(0,1);
             $newComic->cover = $faker->imageUrl(200,300);
             $newComic->save();
         }
