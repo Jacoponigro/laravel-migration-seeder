@@ -11,10 +11,19 @@
     <ul>
         @foreach ($comics as $comic)
         <li>
-            <h2>{{$comic->title}}</h2>
+            <h2>TITOLO: {{$comic->title}}</h2>
+            <h3>TITOLO ORIGINALE: {{$comic->original_title}}</h3>
+            <p>AUTORE: {{$comic->author}}</p>
+            <p>EDIZIONE: {{$comic->edition}}</p>
+            <p>NUMERO: {{$comic->number}}</p>
+            <p>NUMERO PAGINE: {{$comic->num_pages}}</p>
+            <p>RILASCIO: {{$comic->release}}</p>
+            <p>PREZZO: {{$comic->price}}</p>
+            <p>COLORATO: {{$comic->colored}}</p>
             <img src="{{$comic->cover}}" alt="{{$comic->title}}">    
         </li>    
         @endforeach
     </ul>
 </body>
 </html> 
+
